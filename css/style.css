@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+ul {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/* estilos index */
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gradientes {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+    border: rgb(73, 185, 58) solid 5px;
+    /* background-image: linear-gradient(#FD6F96 20%, red, rgb(15, 15, 92) 40%); */
+    background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+.trasladar {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+    border: black solid 5px;
+    /* transform: translate(50px, 60px); */
+    /*1ro eje x (horizontal) 2do eje Y (vert)*/
+}
+
+.rotar {
+    /*unidad de rotacion "deg"*/
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+    /* transform: rotate(-40deg); */
+}
+
+.escalar {
+    /* valores mayores a 1 agranda, entre 1 y 0 achica */
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+    border: rgb(81, 50, 192) solid 5px;
+    /* transform: scale(0.5, 0.5); */
+    transform: skew(20deg, 10deg);
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+/* estilos transicion */
+
+.transicion {
+    margin: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.transicion:hover {
+    color: blueviolet;
+    font-family: cursive;
+    font-size: 100px;
+}
+
+.boton {
+    height: 100px;
+    margin-left: 200px;
+    border: red solid 5px;
+}
+
+.boton:focus {
+    border: blue dotted 10px;
+}
+
+.animacion {
+    color: rgb(156, 31, 73);
+    margin: 200px;
+    font-size: 100px;
+    animation-name: efecto;
+    /*nombre*/
+    animation-iteration-count: infinite;
+    /*veces que se ejecuta*/
+    animation-duration: 4s;
+    animation-delay: 2s;
+    /* tiempo desde que carga */
+}
+
+
+/* 
+@keyframes efecto {
+    0% {
+        color: crimson
+    }
+    25% {
+        color: darkblue;
+        font-size: 50px;
+        transform: rotate(90deg);
+    }
+    50% {
+        color: rgb(156, 31, 73);
+    }
+    75% {
+        color: darkorange;
+    }
+    100% {
+        color: black;
+    }
+} */
+
+.otraAnimacion {
+    color: coral;
+    font-size: 100px;
+    margin-left: 200px;
+}
+
+.animate__animated {
+    animation-iteration-count: infinite;
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+/* estilos grid */
+
+.menu {
+    color: crimson;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-areas: "patita   azul    azul" " h         h       h" "texto1     .    texto2";
+    border: cornflowerblue solid 3px;
+}
+
+.logo {
+    width: 80px;
+    grid-area: patita;
+    justify-self: center;
+    align-self: center;
+}
+
+.titulo {
+    color: #da6218;
+    font-family: 'Space Grotesk', sans-serif;
+    grid-area: h;
+    background-color: darkslategrey;
+}
+
+.menu {
+    grid-area: azul;
+}
+
+.p1 {
+    color: blue;
+    grid-area: texto2;
+    margin: 50px;
+}
+
+.carpincho {
+    color: brown;
+    grid-area: texto1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.imgCarpi {
+    height: 200px;
+}
